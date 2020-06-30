@@ -16,7 +16,7 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
     
-mongoose.connect("mongodb://localhost/yelp_camp_v11",{useNewUrlParser : true, useUnifiedTopology:true});
+mongoose.connect("mongodb://localhost/yelp_camp_v12",{useNewUrlParser : true, useUnifiedTopology:true});
 //mongoose.connect("mongodb+srv://riddhih:<RIDPAL>@yelpcamp-4iml6.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser : true, useUnifiedTopology:true});
 
 // const MongoClient = require('mongodb').MongoClient;
@@ -27,7 +27,6 @@ mongoose.connect("mongodb://localhost/yelp_camp_v11",{useNewUrlParser : true, us
   
 //   client.close();
 // });
-process.env.databaseURL
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
